@@ -8,39 +8,41 @@ runtime macros/matchit.vim
 set pastetoggle=<f5>
 
 set rtp+=~/.vim/bundle/vundle.vim/
-call vundle#rc()
+call vundle#begin()
 
 " let Vundle manage Vundle
 " required! 
 " package manager
-Bundle 'gmarik/vundle' 
+Plugin 'gmarik/vundle' 
 
 " syntax checker
-Bundle 'Syntastic'
+Plugin 'Syntastic'
 
 " shows what has been added, removed or modified in git
-Bundle 'vim-gitgutter'
+Plugin 'vim-gitgutter'
 
 " sensible defaults for vim, like nocompatible on steroids
-Bundle 'vim-sensible'
+Plugin 'tpope/vim-sensible'
 
 " you complete me omni completion
-Bundle 'Valloric/YouCompleteMe'
+Plugin 'Valloric/YouCompleteMe'
 
 " ctrl-p fuzzy finder
-Bundle 'kien/ctrlp.vim'
+Plugin 'kien/ctrlp.vim'
 
 " easy motion
-Bundle 'Lokaltog/vim-easymotion'
+Plugin 'Lokaltog/vim-easymotion'
 
 " cmake integration
-" Bundle 'jalcine/cmake.vim'
+" Plugin 'jalcine/cmake.vim'
 
 " gdb integration
-" Bundle 'vim-scripts/gdbmgr'
+" Plugin 'vim-scripts/gdbmgr'
 
 " Nerdtree project explorer
-Bundle 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdtree'
+
+call vundle#end()	
 
 syntax on
 filetype plugin indent on
