@@ -42,6 +42,7 @@ Plugin 'Lokaltog/vim-easymotion'
 " Nerdtree project explorer
 Plugin 'scrooloose/nerdtree'
 
+Plugin 'altercation/vim-colors-solarized'
 call vundle#end()	
 
 syntax on
@@ -71,6 +72,7 @@ let g:syntastic_cpp_remove_include_errors = 1
 
 if has("autocmd")
 	autocmd FileType c,cpp set autoindent shiftwidth=4 softtabstop=4 tabstop=4 expandtab
+        autocmd FileType python set autoindent shiftwidth=4 softtabstop=4 tabstop=4 expandtab
 	autocmd FileType ruby,haml,eruby,yaml,html,javascript,sass,cucumber set autoindent shiftwidth=2 softtabstop=2 tabstop=2 expandtab
 	autocmd BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru} set ft=ruby
 
@@ -200,3 +202,6 @@ map <C-n> :e.<CR>
 " use split model
 let NERDTreeHijackNetrw=1
 let NERDTreeShowLineNumbers=1
+
+" turn on column and line numbers in status bar
+set ruler
