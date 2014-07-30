@@ -7,7 +7,7 @@ runtime macros/matchit.vim
 " means f5 can get us in and out of paste mode
 set pastetoggle=<f5>
 
-set rtp+=~/.vim/bundle/vundle.vim/
+set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#begin()
 
 " let Vundle manage Vundle
@@ -40,7 +40,10 @@ Plugin 'Lokaltog/vim-easymotion'
 " Plugin 'vim-scripts/gdbmgr'
 
 " Nerdtree project explorer
-Plugin 'scrooloose/nerdtree'
+Plugin 'austinwiltshire/nerdtree'
+
+" Solarized for vim
+Plugin 'altercation/vim-colors-solarized'
 
 Plugin 'altercation/vim-colors-solarized'
 call vundle#end()	
@@ -150,6 +153,7 @@ nnoremap j gj
 nnoremap k gk
 
 " solarize dark
+syntax enable
 set background=dark
 colorscheme solarized
 
@@ -205,3 +209,4 @@ let NERDTreeShowLineNumbers=1
 
 " turn on column and line numbers in status bar
 set ruler
+let NERDTreeShowBookmarks=1
