@@ -25,7 +25,7 @@ Plugin 'vim-gitgutter'
 Plugin 'tpope/vim-sensible'
 
 " you complete me omni completion
-Plugin 'Valloric/YouCompleteMe'
+" Plugin 'Valloric/YouCompleteMe'
 
 " ctrl-p fuzzy finder
 Plugin 'kien/ctrlp.vim'
@@ -45,7 +45,6 @@ Plugin 'austinwiltshire/nerdtree'
 " Solarized for vim
 Plugin 'altercation/vim-colors-solarized'
 
-Plugin 'altercation/vim-colors-solarized'
 call vundle#end()	
 
 syntax on
@@ -57,9 +56,9 @@ set hlsearch
 set hidden
 
 " Syntastic flags
-let g:syntastic_cpp_compiler = 'clang++' " Switch to clang rather than gcc
+" let g:syntastic_cpp_compiler = 'clang++' " Switch to clang rather than gcc
 let g:syntastic_cpp_check_header = 1  " check .h and .hpp files
-let g:syntastic_cpp_config = '/Users/austinwiltshire/.syntastic_cpp_config'
+let g:syntastic_cpp_config = '~/.syntastic_cpp_config'
 
 " uncomment this to run all checkers. so long as its commented we only run
 " them in order
@@ -162,7 +161,7 @@ set cursorline
 set cursorcolumn
 
 " youcomplete me
-let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py'
+" let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py'
 
 " should jump between declaration and definition
 " does not appear to work
@@ -210,3 +209,10 @@ let NERDTreeShowLineNumbers=1
 " turn on column and line numbers in status bar
 set ruler
 let NERDTreeShowBookmarks=1
+
+" backup settings, ensures temp files don't get stored in project directory
+set backupdir=~/.vim/backup//
+set directory=~/.vim/swap//
+set undodir=~/.vim/undo//
+
+
